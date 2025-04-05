@@ -2,11 +2,11 @@
 
 A full-stack Task Management System that allows users to **Create**, **Read**, **Update**, and **Delete** tasks. The application supports authentication, role-based access, task filtering, and sorting — built with:
 
-- 🧠 **NestJS** (Backend API)
-- 💾 **PostgreSQL** (Database)
-- ⚛️ **React.js** (Frontend)
-- 🐳 **Docker Compose** (Orchestration)
-- 🔐 **JWT Authentication** (Secured Endpoints)
+-  **NestJS** (Backend API)
+-  **PostgreSQL** (Database)
+-  **React.js** (Frontend)
+-  **Docker Compose** (Orchestration)
+-  **JWT Authentication** (Secured Endpoints)
 
 ---
 
@@ -60,13 +60,13 @@ JWT Auth with Passport
 
 ### 4. API endpoints:
 #### Method	Endpoint	Access	Description
-GET	/tasks	Public	Fetch all tasks
-POST	/tasks	Authenticated	Create a new task
-PUT	/tasks/:id	Authenticated	Update a task
-DELETE	/tasks/:id	Authenticated	Delete a task
-POST	/auth/login	Public	Login and get JWT token
-POST	/users	Public	Register a new user
-🗃 Tables
+- GET	/tasks	Public	Fetch all tasks
+- POST	/tasks	Authenticated	Create a new task
+- PUT	/tasks/:id	Authenticated	Update a task
+- DELETE	/tasks/:id	Authenticated	Delete a task
+- POST	/auth/login	Public	Login and get JWT token
+- POST	/users	Public	Register a new user
+##### Tables
 users: id, username, hashed password
 
 tasks: id, title, description, status, due_date, user_id
