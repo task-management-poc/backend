@@ -10,11 +10,6 @@ A full-stack Task Management System that allows users to **Create**, **Read**, *
 
 ---
 
-## 📁 Monorepo Structure
-
-
----
-
 ## 🚀 How to Setup & Run
 
 ### 1. Clone the Repository
@@ -23,7 +18,9 @@ A full-stack Task Management System that allows users to **Create**, **Read**, *
 git clone https://github.com/your-username/task-manager-monorepo.git
 cd task-manager-monorepo
 
-### Create a .env file inside the backend/ directory:
+---
+
+### 2. Create a .env file inside the backend/ directory:
 DB_HOST=postgres
 DB_PORT=5432
 DB_USERNAME=postgres
@@ -32,6 +29,8 @@ DB_NAME=taskdb
 
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRES_IN=3600s
+
+---
 
 🔧 How the Project Works
 ✅ Features Overview
