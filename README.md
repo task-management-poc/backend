@@ -60,12 +60,12 @@ JWT Auth with Passport
 
 ### 4. API endpoints:
 #### Method	Endpoint	Access	Description
-- GET	/tasks	Public	Fetch all tasks
-- POST	/tasks	Authenticated	Create a new task
-- PUT	/tasks/:id	Authenticated	Update a task
-- DELETE	/tasks/:id	Authenticated	Delete a task
-- POST	/auth/login	Public	Login and get JWT token
-- POST	/users	Public	Register a new user
+- GET	/tasks :-	Public	Fetch all tasks
+- POST	/tasks :-	Authenticated	Create a new task
+- PUT	/tasks/:id :-	Authenticated	Update a task
+- DELETE	/tasks/:id :-	Authenticated	Delete a task
+- POST	/auth/login :-	Public	Login and get JWT token
+- POST	/users :-	Public	Register a new user
 ##### Tables
 users: id, username, hashed password
 
