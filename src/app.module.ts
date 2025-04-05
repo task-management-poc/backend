@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { TaskModule } from './task/task.module';
+import { AuthModule } from './auth/auth.module';
 
 const env = require('dotenv');
 
@@ -19,6 +20,7 @@ env.config();
       synchronize: true, // Set to false in production
     }),
     TaskModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
