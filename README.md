@@ -1,4 +1,4 @@
-# ✅ Task Management System – Full Stack (NestJS + React + PostgreSQL)
+# Task Management System – Full Stack (NestJS + React + PostgreSQL)
 
 A full-stack Task Management System that allows users to **Create**, **Read**, **Update**, and **Delete** tasks. The application supports authentication, role-based access, task filtering, and sorting — built with:
 
@@ -35,8 +35,8 @@ JWT_EXPIRES_IN=3600s
 ```
 ---
 
-🔧 How the Project Works
-✅ Features Overview
+### 3. How the Project Works, Features Overview Public access to view tasks
+####   Features Overview
 Public access to view tasks
 
 Authenticated users can add, update, and delete tasks
@@ -47,10 +47,9 @@ Tasks have: title, description, status, due date
 
 Filtering, Sorting, and Validation
 
-Dockerized backend, frontend, and database
 
-Backend (NestJS + Sequelize)
-🔨 Technologies
+#### Backend (NestJS + Sequelize)
+Technologies
 NestJS (Modular backend framework)
 
 PostgreSQL
@@ -59,8 +58,8 @@ Sequelize ORM
 
 JWT Auth with Passport
 
-🔁 API Endpoints
-Method	Endpoint	Access	Description
+### 4. API endpoints:
+#### Method	Endpoint	Access	Description
 GET	/tasks	Public	Fetch all tasks
 POST	/tasks	Authenticated	Create a new task
 PUT	/tasks/:id	Authenticated	Update a task
