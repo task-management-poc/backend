@@ -9,11 +9,11 @@ import { InjectModel } from '@nestjs/sequelize';
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(
     @InjectModel(User) private readonly userModel: typeof User,
-    private readonly configService: ConfigService, // Inject ConfigService
+    private readonly configService: ConfigService,
   ) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      secretOrKey: configService.get('JWT_SECRET'), // Use ConfigService to get secret
+      secretOrKey: configService.get('JWT_SECRET'),
     });
   }
 

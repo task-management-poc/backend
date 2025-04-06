@@ -16,8 +16,7 @@ export class AuthService {
   async validateUser(username: string, pass: string): Promise<any> {
     const user = await this.userModel.findOne({ where: { username } });
     if (user && await bcrypt.compare(pass, user.passwordHash)) {
-      const { passwordHash, ...result } = user;
-      return result;
+      return user;
     }
     return null;
   }
@@ -26,7 +25,8 @@ export class AuthService {
     if (!user) {
       throw new UnauthorizedException('Invalid credentials');
     }
-    const payload = { username: user.username, sub: user.id, role: user.role };
+    const userData = user.get?.() || user; 
+    const payload = { username: userData.username, sub: userData.id };
     return { access_token: this.jwtService.sign(payload) };
   }
 
@@ -39,14 +39,12 @@ export class AuthService {
 
     const passwordHash = await bcrypt.hash(registerDto.password, 10);
 
-    const user = new User();
-    user.username = registerDto.username;
-    user.passwordHash = passwordHash;
-
-    console.log('User object before save:', user); // Add this line
-
     try {
-      const savedUser = await this.userModel.create(user);
+      const savedUser = await this.userModel.create({
+        username: registerDto.username,
+        passwordHash: passwordHash,
+      });
+  
       return savedUser;
     } catch (error) {
       console.error('Error saving user:', error);
